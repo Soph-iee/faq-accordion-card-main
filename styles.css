@@ -1,0 +1,149 @@
+ @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Overpass:wght@400;700&display=swap');
+ 
+ 
+ :root {
+    --Verydarkblue: hsl(238, 29%, 16%);
+     --Softred: hsl(14, 88%, 65%);
+    --BgSoftviolet: hsl(273, 75%, 66%);
+     --Softblue: hsl(240, 73%, 65%);
+      --TextVerydarkgrayishblue: hsl(237, 12%, 33%);
+       --Darkgrayishblue: hsl(240, 6%, 50%);
+     --Lightgrayishblue: hsl(240, 5%, 91%);
+ } 
+ 
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ html{font-size: 62.5%;
+    overflow-x: hidden;
+
+
+ }
+  
+ body {
+    height: 100vh;
+    background-color: var(--BgSoftviolet);
+    font-family: 'Kumbh Sans';
+    font-size: 12px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+}
+.container {
+    background:#fff;
+    width: 100rem;
+        padding:8rem ;
+        margin:  auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+   
+}
+.bg-blend{
+    width: 50%;
+    height: 35rem;
+    background-image: url(images/bg-pattern-desktop.svg), url(images/illustration-woman-online-desktop.svg), url(images/illustration-box-desktop.svg);
+  background-repeat: no-repeat;
+background-size: contain  ;
+}
+
+.accordion{
+    width: 50%;
+}
+#header{ font-weight: 700;
+    text-transform: uppercase;   
+    margin: 10px 0;
+}
+.question-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    cursor: pointer;} 
+
+.accordion-item {
+    margin: 10px 0;
+    color: var(--TextVerydarkgrayishblue);
+    font-weight: lighter;
+}
+.accordion-item:hover {
+    color: var(--Softred);
+    transition: color 0.3s ease-in-out;
+}
+.icon{
+    height: 10px;
+        align-self: center;
+transition: transform 0.3s ease-in-out    }
+
+.accordion-content {
+    color: var(--Darkgrayishblue);
+    display: none;
+}
+hr {
+height: 1px;
+margin-top: 1rem;
+background-color:var(--Lightgrayishblue);
+border: none;
+}
+.display{
+    display: none;
+}
+.accordion-container.active .accordion-content {
+    display: block;
+
+  
+}
+.accordion-container.active .accordion-item {
+    color: var(--Verydarkblue);
+    font-weight: 700;
+}
+.accordion-container.active .icon {
+    transform: rotate(180deg);
+}
+    @media screen and (max-width: 375px) {
+body {
+        height: 100vh;
+        background-color: var(--BgSoftviolet);
+        font-family: 'Kumbh Sans';
+        font-size: 12px;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+        .container {
+            background: #fff;
+            width: 100rem;
+            padding: 1rem;
+            margin: auto;
+            display: flex;
+         flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            position: relative;
+             overflow: hidden;}
+        
+    
+        .pattern {
+            position: absolute;
+            translate: 100px -900px;
+    
+    
+        }
+    
+        .woman {
+            position: absolute;
+            translate: 100px 10 0px;
+    
+        }
+    
+        .box {position: absolute;
+        translate: 100px -400px; }
+    }
